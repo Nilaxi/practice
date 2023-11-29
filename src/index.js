@@ -7,12 +7,13 @@ import Counter from './Counter';
 import MultipleState from './MultipleState';
 
 import reportWebVitals from './reportWebVitals';
+import { APIDisplay } from './APIDisplay';
 
 
 const root = ReactDOM.createRoot(document.getElementById('main'));
 root.render(
   <React.StrictMode>
-    <MultipleState/>
+    <APIDisplay/>
   </React.StrictMode>
 );
 
