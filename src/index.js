@@ -8,12 +8,13 @@ import MultipleState from './MultipleState';
 import DisplayAPIwithClass from './DisplayAPIwithClass';
 import reportWebVitals from './reportWebVitals';
 import { APIDisplay } from './APIDisplay';
+import Formfunction from './Formfunction';
 
 
 const root = ReactDOM.createRoot(document.getElementById('main'));
 root.render(
   <React.StrictMode>
-    <DisplayAPIwithClass/>
+    <Formfunction/>
   </React.StrictMode>
 );
 

@@ -4,7 +4,7 @@ import React, { useState } from 'react'
     const [counter,setCounter]  = useState(0);
     const incr = () => {
         setCounter(counter+1);
-        console.log(Counter);
+        console.log(Counter);   
     }
     const sub = () => {
         setCounter(counter-1);
