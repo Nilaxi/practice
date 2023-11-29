@@ -5,7 +5,7 @@ import App from './App';
 import Home from './Home';
 import Counter from './Counter';
 import MultipleState from './MultipleState';
-
+import DisplayAPIwithClass from './DisplayAPIwithClass';
 import reportWebVitals from './reportWebVitals';
 import { APIDisplay } from './APIDisplay';
 
@@ -13,7 +13,7 @@ import { APIDisplay } from './APIDisplay';
 const root = ReactDOM.createRoot(document.getElementById('main'));
 root.render(
   <React.StrictMode>
-    <APIDisplay/>
+    <DisplayAPIwithClass/>
   </React.StrictMode>
 );
 
