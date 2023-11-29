@@ -4,13 +4,15 @@ import './index.css';
 import App from './App';
 import Home from './Home';
 import Counter from './Counter';
+import MultipleState from './MultipleState';
 
 import reportWebVitals from './reportWebVitals';
+
 
 const root = ReactDOM.createRoot(document.getElementById('main'));
 root.render(
   <React.StrictMode>
-    <Counter/>
+    <MultipleState/>
   </React.StrictMode>
 );
 
