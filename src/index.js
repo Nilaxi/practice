@@ -9,10 +9,10 @@ import DisplayAPIwithClass from './DisplayAPIwithClass';
 import reportWebVitals from './reportWebVitals';
 import { APIDisplay } from './APIDisplay';
 import Formfunction from './Formfunction';
-
+import MyProps from './MyProps';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Ecommers } from './Ecommers';
-
+import FormInClass from './FormInClass';
 
 
 
@@ -21,7 +21,7 @@ import { Ecommers } from './Ecommers';
 const root = ReactDOM.createRoot(document.getElementById('main'));
 root.render(
   <React.StrictMode>
-    <Ecommers/>
+    <FormInClass/>
   </React.StrictMode>
 );
 
