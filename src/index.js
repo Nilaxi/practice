@@ -13,6 +13,7 @@ import MyProps from './MyProps';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Ecommers } from './Ecommers';
 import FormInClass from './FormInClass';
+import RagistrationForm from './RagistrationForm';
 
 
 
@@ -21,7 +22,7 @@ import FormInClass from './FormInClass';
 const root = ReactDOM.createRoot(document.getElementById('main'));
 root.render(
   <React.StrictMode>
-    <FormInClass/>
+    <RagistrationForm/>
   </React.StrictMode>
 );
 
