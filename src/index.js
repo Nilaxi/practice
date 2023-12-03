@@ -14,7 +14,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Ecommers } from './Ecommers';
 import FormInClass from './FormInClass';
 import RagistrationForm from './RagistrationForm';
-
+import CrudOperation from './CrudOperation';
+import CrudOperationH from './CrudOperationH';
 
 
 
@@ -22,7 +23,7 @@ import RagistrationForm from './RagistrationForm';
 const root = ReactDOM.createRoot(document.getElementById('main'));
 root.render(
   <React.StrictMode>
-    <RagistrationForm/>
+    <CrudOperationH/>
   </React.StrictMode>
 );
 
