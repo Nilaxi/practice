@@ -1,7 +1,7 @@
 import { Field, Form, Formik } from 'formik'
 import React from 'react'
 
-export default function RagistrationForm() {
+ function RagistrationForm() {
   const n = {
     firstName: "",
     lastName: "",
@@ -36,3 +36,4 @@ export default function RagistrationForm() {
   )
 
 }
+export default RagistrationForm

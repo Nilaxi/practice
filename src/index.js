@@ -16,6 +16,10 @@ import FormInClass from './FormInClass';
 import RagistrationForm from './RagistrationForm';
 import CrudOperation from './CrudOperation';
 import CrudOperationH from './CrudOperationH';
+import Login from './Login';
+
+
+
 
 
 
@@ -23,7 +27,7 @@ import CrudOperationH from './CrudOperationH';
 const root = ReactDOM.createRoot(document.getElementById('main'));
 root.render(
   <React.StrictMode>
-    <CrudOperationH/>
+    <Login/>
   </React.StrictMode>
 );
 

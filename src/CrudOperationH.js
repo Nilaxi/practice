@@ -13,13 +13,16 @@ export default function CrudOperationH() {
     const [index,setIndex] = useState(-1);
     const [multipleData,setMultipleData] = useState([]);   
     const  changeValue = (e) =>{
+        console.log(e.target.name);
+        console.log(e.target.value);
         setData({...data,[e.target.name]:e.target.value})
     }
+
 
     const saveInfo = (e) =>{
         e.preventDefault();
         let n = [...multipleData];
-        if(index == -1){
+        if(index === -1){
         n.push(data);
         }
         else{
@@ -46,11 +49,11 @@ export default function CrudOperationH() {
             <input type='text' name='firstName' onChange={changeValue} value={data.firstName} /><br/><br/>
             <input type='text' name='lastName'  onChange={changeValue} value={data.lastName}/><br/><br/>
             <label name='address'>Address :</label>
-           
+                
             <select onChange={changeValue} value={data.address.city}>
                <option value="Vadodara">Vadodara</option>
                 <option value="Ahmedabad">Ahmedabad</option>
-                <option value="Banglore">Banglore</option>
+                <option value="Banglore">Pondycharry</option>
             </select>
             <input type="text" name="address" onChange={changeValue} value={data.address.state} /><br/><br/>
 
