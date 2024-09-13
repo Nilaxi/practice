@@ -1,43 +1,48 @@
+import axios, { Axios } from 'axios';
+import React, { useState } from 'react'
 import { Field, Form, Formik } from 'formik'
-import React from 'react'
+
 
  function RegForm() {
-    const n = {
-      firstName: "",
+  const  [data,setData] = useState({
+    firstName: "",
       title : "",
       lastName: "",
       email: "",
       password: "",
       confirmPassword: "",
       acceptterms: false
-    }
-    return (
-      <div>
-        <h2>reg Form</h2>
-        <Formik initialValues={n}
-          onSubmit={(values) => {
-            console.log(values)
-          }}>
-          <Form>
-            <label htmlFor='firstName'>FirstName</label>
-            <Field id="firstName" name="firstName" placeholder="Please enter your Fullname"></Field><br></br>
-            <label htmlFor='title'>Title</label>
-            <Field id="title" name="title" placeholder="Please enter your title"></Field><br></br>
-            <lable htmlFor='lastName'>LastName</lable>
-            <Field id="lastName" name="lastName" placeholder="Please enter your Username"></Field><br></br>
-            <lable htmlFor='email'>Email</lable>
-            <Field id="email" name="email" placeholder="Please enter your Email"></Field><br></br>
-            <lable htmlFor='password'>Password</lable>
-            <Field id="password" name="password" placeholder="Please enter your password"></Field><br></br>
-            <lable htmlFor='confirmPassword'>ConfirmPassword</lable>
-            <Field id="confirmPassword" name="confirmPassword" placeholder="Please enter your ConfirmPassword"></Field><br></br>
-            <label htmlFor='acceptterms'><Field type="checkbox" name="acceptterms" />AcceptTerms</label><br></br><br></br>
-            <button type="submit">Submit</button>
-          </Form>
-        </Formik>
-      </div>
-    )
+});
+const handleSubmit = (e) =>{
+  e.preventDefault();
+  axios.post("https://real-pear-fly-kilt.cyclic.app/accounts/register",data)
+  .then(y=>{
+      localStorage.setItem("token",JSON.stringify(y.data))   
+      console.log(y.data);
+      }).catch(y=>{
+        console.log(y)
+    })
+}
+const handleInput = (e) =>{
+      setData({...data,[e.target.name]: e.target.value})
+}
+
   
-  }
+    return (
+        <div>
+          <form onSubmit={handleSubmit}>
+            <input type="text" name="firstName" value={data.firstName} onChange={handleInput}></input>
+            <input type="text" name="title" value={data.title} onChange={handleInput}></input>
+            <input type="text" name="lastName" value={data.lastName} onChange={handleInput}></input>
+            <input type="text" name="email" value={data.email} onChange={handleInput}></input>
+            <input type="text" name="password" value={data.password} onChange={handleInput}></input>
+            <input type="text" name="confirmPassword" value={data.confirmPassword} onChange={handleInput}></input>
+
+            <input type="submit" value="Save"></input>
+          </form>
+        </div>
+          )
+    } 
+
   export default RegForm
   

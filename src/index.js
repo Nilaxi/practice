@@ -13,10 +13,14 @@ import MyProps from './MyProps';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Ecommers } from './Ecommers';
 import FormInClass from './FormInClass';
-import RagistrationForm from './RagistrationForm';
+
 import CrudOperation from './CrudOperation';
 import CrudOperationH from './CrudOperationH';
 import Login from './Login';
+import {BrowserRouter} from "react-router-dom" ;
+import RegForm from './RegForm';
+import SignUp from './SignUp';
+
 
 
 
@@ -27,8 +31,11 @@ import Login from './Login';
 const root = ReactDOM.createRoot(document.getElementById('main'));
 root.render(
   <React.StrictMode>
-    <Login/>
-  </React.StrictMode>
+     <BrowserRouter> 
+    <Home />
+    <SignUp/>
+    </BrowserRouter> 
+</React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

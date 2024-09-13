@@ -5,12 +5,15 @@ export const APIDisplay = () => {
     useEffect(()=>{
         fetch("https://jsonplaceholder.typicode.com/albums")
         .then(y =>y.json())
-        .then(y => setData(y))
+        .then(y =>{
+          setData(y)
+        })  
+         
     },[])
   return(
     <table>
         <tbody>
-            {data.map((v)=> {
+           { data.map((v)=> {
                 return(<tr><td>{v.userId}</td>
                             <td>{v.id}</td>
                             <td>{v.title}</td>
